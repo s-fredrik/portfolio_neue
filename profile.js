@@ -27,7 +27,7 @@ var fragmentShaderText =
 var InitializeProfileGL = function() {
   
   var canvas = document.getElementById('profile-canvas');
-  var gl = new canvas.getContext('webgl');
+  var gl = canvas.getContext('webgl');
   
   if (!gl) {
     console.log('WebGL not supported, falling back on experimental-webgl');
