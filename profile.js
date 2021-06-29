@@ -120,4 +120,4 @@ var InitializeProfileGL = function() {
   
 }
 
-body.onload = function () { InitializeProfileGL() }
+document.onload = function () { InitializeProfileGL() }
