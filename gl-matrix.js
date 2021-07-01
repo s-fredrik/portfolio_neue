@@ -4271,7 +4271,6 @@ THE SOFTWARE.
     var len = x * x + y * y + z * z;
 
     if (len > 0) {
-      //TODO: evaluate use of glm_invsqrt here?
       len = 1 / Math.sqrt(len);
     }
 
@@ -5828,7 +5827,6 @@ THE SOFTWARE.
 
   function random$1(out) {
     // Implementation of http://planning.cs.uiuc.edu/node198.html
-    // TODO: Calling random 3 times is probably not the fastest solution
     var u1 = RANDOM();
     var u2 = RANDOM();
     var u3 = RANDOM();
@@ -5854,7 +5852,7 @@ THE SOFTWARE.
         a2 = a[2],
         a3 = a[3];
     var dot = a0 * a0 + a1 * a1 + a2 * a2 + a3 * a3;
-    var invDot = dot ? 1.0 / dot : 0; // TODO: Would be faster to return [0,0,0,0] immediately if dot == 0
+    var invDot = dot ? 1.0 / dot : 0;
 
     out[0] = -a0 * invDot;
     out[1] = -a1 * invDot;
@@ -6479,7 +6477,6 @@ THE SOFTWARE.
    */
 
   function fromMat4(out, a) {
-    //TODO Optimize this
     var outer = create$2();
     getRotation(outer, a);
     var t = new ARRAY_TYPE(3);
@@ -7488,7 +7485,6 @@ THE SOFTWARE.
     var len = x * x + y * y;
 
     if (len > 0) {
-      //TODO: evaluate use of glm_invsqrt here?
       len = 1 / Math.sqrt(len);
     }
 
